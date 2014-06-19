@@ -7,7 +7,7 @@ example [('what is my name?','azuriah'),('what is my favorite color?','blue')]
 
 call
 if __name__ == '__main__':
-    test.Test(questions, #howmanyquestions)
+    test.Test(questions, #howmanychoices)
 from another file
 '''
 
