@@ -7,4 +7,4 @@ print('')
 '''if program does not start automatically press any key and enter for it to begin'''
 
 if __name__ == '__main__':
-    test.Test(questions, 3, language = True, reading = True)
+    testing.Test(questions, 3, language = True, reading = True)

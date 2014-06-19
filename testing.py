@@ -86,13 +86,17 @@ class Test:
                         if len(i[list(i)[0]].split()) > 1:
                             question.append('%s: %s' % (self.x, i[list(i)[0]].split(' ',1)[0]))
                         else: question.append('%s' % self.x)
-                else: question.append(self.x)
                 try: answers.append('%s: %s' % (list(i)[0], i[list(i)[0]].split(' ',1)[1]))
                 except IndexError: answers.append('%s: %s' % (list(i)[0], i[list(i)[0]].split(' ',1)[0]))
-            print('question: '+' '.join(question))
-            for x in answers:
-                print(x)
-            answer = input('answer: ')
-            self.check = answer
-            self.check_answer()
+            if not self.reading: question.update(self.x)
+        else:
+            for i in self.question[self.x]:
+                answers.append('%s: %s' % (list(i)[0], i[list(i)[0]]))
+            question.append(self.x)                
+        print('question: '+' '.join(question))
+        for x in answers:
+            print(x)
+        answer = input('answer: ')
+        self.check = answer
+        self.check_answer()
         
